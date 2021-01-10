@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">MyGuessApp</string>
+    <string name="play_button">Play</string>
+    <string name="instruction_button">Instructions</string>
+    <string name="back_button">Back</string>
+    <string name="select_cup">Select point cap</string>
+    <string name="next_round_text">Now give phone to next team leader</string>
+    <string-array name="point_caps">
+        <item>10 points</item>
+        <item>15 points</item>
+        <item>20 points</item>
+    </string-array>
+
+    <string name="instructions">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget rhoncus sapien.
+        Proin pulvinar feugiat tristique. Suspendisse quis fringilla arcu. Aenean ullamcorper blandit quam, ullamcorper luctus ex.
+        Mauris pellentesque pulvinar lacus, et cursus ipsum ultricies a. Ut vel lacinia ipsum.
+        Donec magna odio, lobortis non eleifend sit amet, viverra eu arcu. Aenean sit amet venenatis lacus, id condimentum eros.
+        Duis condimentum, diam nec aliquet mollis, neque erat ornare nisl, in sodales ex massa at mi.
+        Sed tincidunt facilisis tellus ac blandit. Proin sed est dictum, sodales ante sed, faucibus lectus.
+        Maecenas nisi quam, dignissim sed magna a, vestibulum suscipit diam. Suspendisse eleifend mattis luctus.
+        Sed placerat eros ut orci lobortis accumsan.
+    </string>
+</resources>
