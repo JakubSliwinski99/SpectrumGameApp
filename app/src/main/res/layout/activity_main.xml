@@ -1,61 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="413dp"
-        android:layout_height="226dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="-2dp">
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="240dp"
-            android:layout_height="40dp"
-            android:gravity="center"
-            android:text="@string/app_name"
-            android:textSize="30sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="409dp"
-        android:layout_height="277dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="420dp"
+        android:layout_height="820dp"
+        android:background="@drawable/gradient_background"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+        app:layout_constraintTop_toTopOf="parent">
 
         <Button
             android:id="@+id/playButton"
             android:layout_width="200dp"
             android:layout_height="48dp"
+            android:layout_marginTop="216dp"
+            android:background="#D8E4FF"
             android:text="@string/play_button"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:textColor="#000000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
         <Button
             android:id="@+id/button10"
             android:layout_width="200dp"
             android:layout_height="48dp"
             android:layout_marginTop="16dp"
+            android:background="#D8E4FF"
             android:onClick="goToInstructions"
             android:text="@string/instruction_button"
+            android:textColor="#000000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/playButton" />
 
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="240dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="120dp"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="#D8E4FF"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

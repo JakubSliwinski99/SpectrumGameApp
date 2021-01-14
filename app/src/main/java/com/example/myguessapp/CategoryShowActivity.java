@@ -1,8 +1,12 @@
 package com.example.myguessapp;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -23,6 +27,7 @@ public class CategoryShowActivity extends AppCompatActivity {
     int level;
     ProgressBar levelShower;
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,25 +36,26 @@ public class CategoryShowActivity extends AppCompatActivity {
         Intent intent = getIntent();
         currentGame = (Game) intent.getSerializableExtra("game");
 
-        topCategory = (TextView) findViewById(R.id.category1guess);
-        bottomCategory = (TextView) findViewById(R.id.category2guess);
-        header = (TextView) findViewById(R.id.categoryShowHeader);
+        topCategory = findViewById(R.id.category1guess);
+        bottomCategory = findViewById(R.id.category2guess);
+        header = findViewById(R.id.categoryShowHeader);
 
-        category1 = currentGame.getRound().getCurrentCategories().get(0).toString();
-        category2 = currentGame.getRound().getCurrentCategories().get(1).toString();
+        category1 = currentGame.getRound().getCurrentCategories().get(0);
+        category2 = currentGame.getRound().getCurrentCategories().get(1);
 
         String headerMessage = "Team " + currentGame.getActiveTeamName() + " turn!";
         header.setText(headerMessage);
 
         level = currentGame.getRound().getCorrectAnswer();
-        levelShower = (ProgressBar) findViewById(R.id.levelGuesser);
+        levelShower = findViewById(R.id.levelGuesser);
+        //levelShower.setProgressTintList(ColorStateList.valueOf(Color.RED)); //Maybe change later
 
         topCategory.setText(category1);
         bottomCategory.setText(category2);
         levelShower.setProgress(level);
 
         //Button handler
-        readyButton = (Button) findViewById(R.id.readyButton);
+        readyButton = findViewById(R.id.readyButton);
 
         readyButton.setOnClickListener(new View.OnClickListener() {
             @Override
